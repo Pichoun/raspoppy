@@ -7,8 +7,8 @@ install_conda()
     bash Berryconda3-2.0.0-Linux-armv6l.sh -b
     rm Berryconda3-2.0.0-Linux-armv6l.sh
     
-    echo 'export PATH=$HOME/miniconda/bin:$PATH' >> $HOME/.bashrc
-    export PATH="$HOME/miniconda/bin:$PATH"
+    echo 'export PATH=$HOME/berryconda3/bin:$PATH' >> $HOME/.bashrc
+    export PATH="$HOME/berryconda3/bin:$PATH"
 
     conda config --add channels poppy-project
     conda config --set show_channel_urls True
@@ -76,8 +76,8 @@ After=network.target network-online.target
 
 [Service]
 PIDFile=/var/run/jupyter-notebook.pid
-Environment="PATH=$HOME/miniconda/bin"
-ExecStart=$HOME/miniconda/bin/jupyter notebook
+Environment="PATH=$HOME/berryconda3/bin"
+ExecStart=$HOME/berryconda3/bin/jupyter notebook
 User=poppy
 Group=poppy
 WorkingDirectory=$JUPTER_NOTEBOOK_FOLDER
