@@ -62,7 +62,7 @@ poppy_password=${poppy_password:-"poppy"}
 poppy_hostname=${poppy_hostname:-"poppy"}
 git_branch=${git_branch:-"master"}
 
-url_root="https://raw.githubusercontent.com/poppy-project/raspoppy/$git_branch"
+url_root="https://raw.githubusercontent.com/Pichoun/raspoppy/$git_branch"
 
 cd /tmp || exit
 wget $url_root/setup-system.sh
