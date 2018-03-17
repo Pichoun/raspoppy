@@ -3,10 +3,10 @@
 install_conda()
 {
     cd || exit
-    wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-armv7l.sh -O Miniconda-latest-Linux-armv7l.sh
-    bash Miniconda-latest-Linux-armv7l.sh -b
-    rm Miniconda-latest-Linux-armv7l.sh
-
+    wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda3-2.0.0-Linux-armv6l.sh -O Berryconda3-2.0.0-Linux-armv6l.sh
+    bash Berryconda3-2.0.0-Linux-armv6l.sh -b
+    rm Berryconda3-2.0.0-Linux-armv6l.sh
+    
     echo 'export PATH=$HOME/miniconda/bin:$PATH' >> $HOME/.bashrc
     export PATH="$HOME/miniconda/bin:$PATH"
 
